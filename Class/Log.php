@@ -1,11 +1,10 @@
 <?php
-
 namespace logProcessing;
 
-class textFile
+class Log
 
 {
-    protected function getStringBetween($string, $start, $end)
+    public function getStringBetween($string, $start, $end)
     {
         $string = ' ' . $string;
         $ini = strpos($string, $start);
@@ -37,10 +36,3 @@ class textFile
 $printFormat = function (string $key, int $value) {
     printf(strtolower($key) . " : " . $value . "<br>");
 };
-
-namespace logFormat;
-
-class loopReading
-{
-
-}
