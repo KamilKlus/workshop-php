@@ -8,3 +8,4 @@
 [2019-03-20 21:38:05] test.INFO: Test message [] []
 [2019-03-20 21:38:05] test.EMERGENCY: Test message [] []
 [2019-03-20 21:38:05] test.ALERT: Test message [] []
+[2019-03-20 21:38:05] test.DEBUG: Test message [] []
