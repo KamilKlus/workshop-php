@@ -1,9 +1,15 @@
 <?php
+
 namespace logProcessing;
 
 class Log
 
 {
+    static function myCallbackMethod()
+    {
+        echo 'Výpis z logu<br>';
+    }
+
     //funkce pro separování obsahu
     public function getStringBetween($string, $start, $end)
     {
@@ -18,7 +24,7 @@ class Log
         return substr($string, $ini, $len);
     }
 
-    public function getContent(string $content, string $start, string $end): array
+    public function getContent(string $content, string $start, string $end): iterable
     {
         //načteme soubor
         $file = fopen($content, "r");
@@ -39,9 +45,9 @@ class Log
         }
         return $array;
     }
-
 }
+
 //formát pro výpus procházenného souboru
-$printFormat= function (string $key, int $value) {
+$printFormat = function (string $key, int $value) {
     printf(strtolower($key) . " : " . $value . "<br>");
 };

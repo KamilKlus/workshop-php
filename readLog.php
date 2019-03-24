@@ -10,6 +10,8 @@ use logProcessing as lp;
         <button name="do">Show Log</button>
     </form>
 <?php
+$obj = new lp\Log();
+call_user_func(array($obj, 'myCallbackMethod'));
 if (isset($_POST["do"])) {
     //získané pdaje od uživatele
     $content = $_POST["content"];
